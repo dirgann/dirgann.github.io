@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #f5eded;
+  font-family: "Fjalla One", sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.nav {
+  z-index: 10;
+  position: fixed;
+  height: 5vh;
+  width: 100%;
+  padding: 2rem 0;
+  background-color: #46487f;
+}
+
+.nav h1 {
+  top: 20px;
+  left: 20px;
+  color: #993399;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  word-spacing: 10px;
+}
+
+.nav .nav-list {
+  margin-top: -30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav .nav-list .nav-item {
+  margin: 0 2rem;
+  list-style: none;
+}
+
+.nav .nav-list .nav-item a {
+  color: #f5eded;
+  transition: all 0.4s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav .nav-list .nav-item a:hover {
+  transform: translateY(-10%);
+  color: red;
+  border-bottom: 2px solid blue;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  border-bottom: 3px solid rgba(35, 140, 253, 0.879);
+}
+
+header .overlay {
+  position: absolute;
+  opacity: 0.7;
+  background-color: black;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+}
+
+header .yay {
+  height: 100%;
+  z-index: 1;
+  background-image: url("img/hck.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .yay .yay-hh {
+  text-align: center;
+  z-index: 5;
+}
+.yay-hh img {
+  position: relative;
+  top: -10%;
+  left: -6%;
+  opacity: 0.8;
+}
+
+.yay-hh h1 {
+  color: white;
+  margin-top: 0;
+}
+
+.yay-hh span {
+  color: red;
+}
+
+.yay-hh h2 {
+  color: darkslateblue;
+  border-bottom: 2px solid blue;
+  border-bottom-style: inset;
+}
+
+.yay-hh h2 span {
+  color: #ff1493;
+}
+
+.yay-hh h4 {
+  color: #9798a7;
+  word-spacing: 10px;
+  position: absolute;
+  top: 90%;
+  left: 45%;
+}
+
+.sosmed {
+  background-color: #d72323;
+  color: #f5f5f5;
+  min-height: 100vh;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sosmed-method {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sosmed-list {
+  width: 100%;
+  position: relative;
+  margin-top: 18%;
+  left: 25%;
+}
+.judul-sosmed {
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+  position: relative;
+  top: 50%;
+  left: -23%;
+  opacity: 0.9;
+}
+
+.sosmed-list h2 {
+  color: #cfd2f6;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 200;
+}
+
+.sosmed-method ul {
+  width: 50%;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+.sosmed-list a {
+  text-decoration: none;
+  color: white;
+}
+
+.sosmed-item {
+  margin: 1rem;
+  font-size: 1.3rem;
+  display: flex;
+  margin: 5%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sosmed-item h4 {
+  letter-spacing: 2px;
+  font-weight: 5;
+  font-size: 15px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  padding: 8px;
+  border-radius: 20px;
+  transition: all 0.4s ease-in-out;
+}
+
+.sosmed-item h4:hover {
+  background-color: #000000;
+  transform: translateY(-10%);
+  opacity: 0.7;
+}
+
+.sosmed-item i {
+  font-size: 2.5rem;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+#tod1 i {
+  color: green;
+}
+
+#tod2 i {
+  color: #e66262;
+}
+
+#tod3 i {
+  color: #e17800;
+}
+
+#tod4 i {
+  color: rgb(229, 229, 229);
+}
+
+.sosmed-item i:hover {
+  transform: translateY(-10%);
+}
+footer {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  height: 5rem;
+  background-color: #3e3636;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f5eded;
+  font-size: 1rrem;
+  border-top: 3px solid #ff1493;
+}
+
+footer span {
+  color: red;
+}
+
+@media screen and (max-width: 770px) {
+  .nav {
+    z-index: 10;
+    position: fixed;
+    height: 5vh;
+    width: 100%;
+    padding: 2rem 0;
+    background-color: #46487f;
+  }
+  .nav h1 {
+    position: relative;
+    top: -10px;
+    left: 30%;
+    transition: none;
+  }
+  .nav .nav-list {
+    display: none;
+  }
+
+  .yay-hh h4 {
+    position: absolute;
+    bottom: 10;
+    left: 30%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .judul-sosmed {
+    position: absolute;
+    top: 20%;
+    left: -1%;
+  }
+
+  .mek h4 {
+    position: relative;
+    word-spacing: 20px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sosmed-list {
+    position: relative;
+    top: 120px;
+  }
+  .sosmed-item {
+    min-height: 60vh;
+    width: 50%;
+  }
+
+  .sosmed-item i {
+    font-size: 2.4rem;
+  }
+
+  .sosmed-item ul a {
+    font-size: 1.9rem;
+  }
+}
